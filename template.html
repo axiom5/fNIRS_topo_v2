@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fNIRS Topography: Trial TBC</title>
+    <!-- External D3 library is still required -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <!-- Placeholder for CSS -->
+    <style>
+        /* --- CSS_PLACEHOLDER --- */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1 id="main-title">fNIRS Topography</h1>
+            <h2 id="subtitle"></h2>
+
+            <div class="topomap-container">
+                <!-- SVG canvas for the topography map -->
+                <svg id="topomap"></svg>
+            </div>
+
+             <!-- Colorbar for signal heatmap -->
+             <div class="colorbar">
+                 <svg id="colorbar"></svg>
+                 <div class="colorbar-label">
+                     <span id="min-val">Min</span>
+                     <span id="max-val">Max</span>
+                 </div>
+             </div>
+
+            <!-- Timeseries Plot -->
+            <div class="timeseries-container">
+                <div id="timeseries-label" class="timeseries-label">Click a channel midpoint to view its signal</div>
+                <svg id="timeseries-plot"></svg>
+            </div>
+        </div>
+
+        <div class="sidebar">
+             <!-- Controls Section -->
+             <div class="controls">
+                 <div class="control-row">
+                     <label for="subject-select">Subject:</label>
+                     <select id="subject-select"></select>
+                 </div>
+                 <div class="control-row">
+                     <label for="subgroup-select">Ch. Subgroup:</label>
+                     <select id="subgroup-select"></select>
+                 </div>
+                 <!-- View Mode Selection -->
+                 <div class="control-row">
+                    <label for="view-mode-select">View Mode:</label>
+                    <select id="view-mode-select">
+                        <option value="heatmap" selected>Signal Heatmap</option>
+                        <option value="anatomical">Anatomical Regions</option>
+                    </select>
+                 </div>
+                 <!-- Time Slider -->
+                 <div class="control-row">
+                    <label for="time-slider">Time (s):</label>
+                    <input type="range" id="time-slider" class="slider" min="0" max="100" value="0">
+                    <span id="time-display" class="value-display">0</span>
+                </div>
+                <!-- Smoothing Slider -->
+                <div class="control-row">
+                    <label for="smoothing-slider">Smoothing:</label>
+                    <input type="range" id="smoothing-slider" class="slider" min="0.1" max="1.5" step="0.05" value="0.85">
+                    <span id="smoothing-display" class="value-display">0.85</span>
+                </div>
+             </div>
+
+             <!-- Legend Container -->
+             <div id="legend-container" class="legend-container" style="display: none;"> <!-- Initially hidden -->
+                <div class="legend-title">Anatomical Regions</div>
+                <div id="anatomical-legend">
+                    <!-- Legend items dynamically added by JS -->
+                </div>
+             </div>
+        </div> <!-- End sidebar -->
+
+    </div> <!-- End container -->
+
+    <!-- Data injected by Python -->
+    <script>
+        var EEG_DATA = {};
+    </script>
+    <!-- Placeholder for JavaScript -->
+    <script>
+        // --- JAVASCRIPT_PLACEHOLDER ---
+    </script>
+
+</body>
+</html>
