@@ -1,9 +1,6 @@
 
 ---
 
-## DOCUMENTATION.md (Revised & Enhanced)
-
-```markdown
 # Documentation: Interactive fNIRS Topography Pipeline
 
 This document provides detailed technical information for the fNIRS visualization pipeline.
