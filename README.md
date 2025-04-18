@@ -24,7 +24,8 @@ Python pipeline to process trial-based fNIRS data, perform MNI co-registration f
 *   NumPy, Pandas, SciPy, Nibabel, MNE-Python, openpyxl
 
 ```bash
-pip install numpy pandas scipy nibabel mne openpyxl```
+pip install numpy pandas scipy nibabel mne openpyxl
+```
 
 ## Installation
 
@@ -55,8 +56,8 @@ Sample data used during development was derived from the publicly available ASTa
 
 ## Citation
 
-If using this tool, please cite:
-*   CeMSIM (2025). Interactive fNIRS Topography Pipeline (Version X.Y.Z). GitHub Repository. [Link](https://github.com/axiom5/fNIRS_topoviewer/) *(Replace link/version)*
+**If using this tool, please cite**:
+*   Subedi, A. (CeMSIM). (2025). Interactive fNIRS Topography Pipeline (Version 2.2.1) [Computer software]. GitHub. [Link](https://github.com/axiom5/fNIRS_topo_v2/)
 
 ## License
 
